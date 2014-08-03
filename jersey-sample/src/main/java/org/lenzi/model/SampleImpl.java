@@ -3,33 +3,30 @@
  */
 package org.lenzi.model;
 
-import java.io.Serializable;
+import org.lenzi.service.jersey.SampleService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
- * @author eDoggie
+ * @author sal
  *
  */
-public class SampleImpl implements Sample, Serializable {
+@Component
+public class SampleImpl implements Sample {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 484949419551840372L;
+	private Logger logger = LoggerFactory.getLogger(SampleService.class);
 
 	/**
 	 * 
 	 */
 	public SampleImpl() {
-
+		logger.debug(SampleImpl.class.getName() + " instance created");
 	}
 
-	/* (non-Javadoc)
-	 * @see org.lenzi.model.Sample#hello()
-	 */
+	@Override
 	public String hello() {
-		
-		return "Hello Jersey + Spring sample!";
-		
+		return "Hello Jersey + Spring";
 	}
-
+	
 }

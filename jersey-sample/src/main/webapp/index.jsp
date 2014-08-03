@@ -6,9 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Jersey + Spring Sample</title>
 </head>
 <body>
+
+<p>
+Sample application integrating Spring & Jersey
+</p>
 
 </body>
 </html>

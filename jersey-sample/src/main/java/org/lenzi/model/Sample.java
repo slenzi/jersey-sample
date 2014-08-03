@@ -4,7 +4,7 @@
 package org.lenzi.model;
 
 /**
- * @author eDoggie
+ * @author sal
  *
  */
 public interface Sample {

@@ -13,12 +13,20 @@
 	
 	<dependencies>
 	
+		<!-- Unit testing -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Logging -->				
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>				
 				
 		<!-- to prevent eclipse from underlining everything red in JSPs  -->
 		<dependency>
@@ -28,11 +36,11 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- Jersey -->
+		<!-- Jersey v2 -->
 		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
-			<version>1.18.1</version>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.11</version>
 		</dependency>
 
 		<!-- Spring -->		
@@ -67,13 +75,17 @@
 			<version>2.4.0.RELEASE</version>
 		</dependency>
 		
-		
-		
+		<!-- Jersey + Spring integration -->		
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-spring3</artifactId>
+			<version>2.11</version>
+		</dependency>
 				
 	</dependencies>
 	
 	<build>
-	<finalName>jersey-sample</finalName>
+		<finalName>jersey-sample</finalName>
 	</build>
 	
 </project>

@@ -5,7 +5,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lenzi</groupId>
-	<artifactId>jetty-sample</artifactId>
+	<artifactId>jersey-sample</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jetty-sample Maven Webapp</name>

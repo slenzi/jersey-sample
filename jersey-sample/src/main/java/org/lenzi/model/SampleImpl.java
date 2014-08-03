@@ -26,7 +26,6 @@ public class SampleImpl implements Sample, Serializable {
 	/* (non-Javadoc)
 	 * @see org.lenzi.model.Sample#hello()
 	 */
-	@Override
 	public String hello() {
 		
 		return "Hello Jersey + Spring sample!";

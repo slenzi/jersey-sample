@@ -5,6 +5,7 @@ package org.lenzi.service.jersey;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -35,7 +36,7 @@ public class SampleService {
 	}
 
 	/**
-	 * @return 
+	 * @return sample hello message
 	 */
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
@@ -43,5 +44,26 @@ public class SampleService {
 		logger.debug("SampleService getHelloMsg called.");
 		return sample.hello();
 	}
+	
+	/**
+	 * @return Number of samples in our sample object.
+	 */
+	@GET
+	@Path("/count")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getSampleCount(){
+		return String.valueOf(sample.getSamples().size());
+	}
+	
+	/**
+	 * @param id the sample id
+	 * @return the sample with the specified id.
+	 */
+	@GET
+	@Path("{sid}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getSample(@PathParam("sid") String id) {
+		return sample.getSample(id);
+	}	
 
 }

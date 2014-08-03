@@ -15,7 +15,15 @@ Sample application integrating Spring & Jersey
 </p>
 
 <p>
-<a href="jersey/sample">fetch hello message from service</a>
+<a href="jersey/sample">fetch hello message (jersey/sample)</a>
+</p>
+
+<p>
+<a href="jersey/sample/count">fetch sample count (jersey/sample/count)</a>
+</p>
+
+<p>
+<a href="jersey/sample/1">fetch sample 1 (jersey/sample/1)</a>
 </p>
 
 </body>

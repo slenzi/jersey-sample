@@ -14,5 +14,9 @@
 Sample application integrating Spring & Jersey
 </p>
 
+<p>
+<a href="jersey/sample">fetch hello message from service</a>
+</p>
+
 </body>
 </html>

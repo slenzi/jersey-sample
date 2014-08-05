@@ -67,8 +67,9 @@ public class SampleService {
 	}
 	
 	/**
-	 * @param id the sample id
-	 * @return the sample with the specified id.
+	 * Fetch sample, test JSON marshalling.
+	 * 
+	 * @return Sample object in JSON format.
 	 */
 	@GET
 	@Path("/samplejson")

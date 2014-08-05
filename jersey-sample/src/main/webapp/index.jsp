@@ -26,5 +26,9 @@ Sample application integrating Spring & Jersey
 <a href="jersey/sample/1">fetch sample 1 (jersey/sample/1)</a>
 </p>
 
+<p>
+<a href="jersey/sample/samplejson">fetch sample as JSON (jersey/sample/samplejson)</a>
+</p>
+
 </body>
 </html>

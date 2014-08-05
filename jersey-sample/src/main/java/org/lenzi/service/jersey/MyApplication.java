@@ -5,6 +5,7 @@ package org.lenzi.service.jersey;
 
 import java.util.Set;
 
+import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,16 +17,24 @@ import org.slf4j.LoggerFactory;
  */
 public class MyApplication extends ResourceConfig {
 
-	private Logger logger = LoggerFactory.getLogger(SampleService.class);
+	private Logger logger = LoggerFactory.getLogger(MyApplication.class);
 	
 	/**
 	 * 
 	 */
 	public MyApplication() {
-		
-		logger.info("Registering Spring resource " + SampleService.class.getName() + " with Jersey.");
-		
-		register(SampleService.class);
+		registerClass(SampleService.class);
+		registerClass(JacksonFeature.class);
+	}
+	
+	/**
+	 * Register as class with Jersey
+	 * 
+	 * @param componentClass
+	 */
+	private void registerClass(Class<?> componentClass){
+		logger.info("Registering resource " + componentClass.getName() + " with Jersey.");
+		register(componentClass);
 	}
 
 	/**

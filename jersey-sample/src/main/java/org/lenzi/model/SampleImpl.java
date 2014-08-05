@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SampleImpl implements Sample {
 
-	private Logger logger = LoggerFactory.getLogger(SampleService.class);
+	private Logger logger = LoggerFactory.getLogger(SampleImpl.class);
 	
 	private HashMap<String, String > mySamples = new HashMap<String, String>(){{
         put("1","Sample 1");

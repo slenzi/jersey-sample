@@ -64,6 +64,17 @@ public class SampleService {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getSample(@PathParam("sid") String id) {
 		return sample.getSample(id);
+	}
+	
+	/**
+	 * @param id the sample id
+	 * @return the sample with the specified id.
+	 */
+	@GET
+	@Path("/samplejson")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Sample getSampleJson() {
+		return sample;
 	}	
 
 }

@@ -5,14 +5,16 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Jersey + Spring Sample</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">	
+	<title>Jersey + Spring Sample</title>
+	
+	<jsp:include flush="true" page="/includes/js_css.jsp" />
+
 </head>
 <body>
 
-<p>
-Sample application integrating Spring & Jersey
-</p>
+<h2>Sample application integrating Spring & Jersey</h2>
 
 <p>
 <a href="jersey/sample">fetch hello message (jersey/sample)</a>

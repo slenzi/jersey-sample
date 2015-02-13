@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @author sal
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Path("/sample")
+@Service
 public class SampleService {
 
 	private Logger logger = LoggerFactory.getLogger(SampleService.class);
@@ -41,7 +43,7 @@ public class SampleService {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getHelloMsg() {
-		logger.debug("SampleService getHelloMsg called.");
+		logger.debug("SampleService getHelloMsg called. Have sample = " + ((sample != null) ? true : false));
 		return sample.hello();
 	}
 	

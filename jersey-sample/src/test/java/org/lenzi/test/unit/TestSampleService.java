@@ -38,12 +38,17 @@ public class TestSampleService extends JerseyTest {
 	@Test
 	public void test(){
 		
-		String response = target("sample").request().get(String.class);
-		assertNotNull("",response);
+		String response = null;
 		
+		response = target("sample").request().get(String.class);
+		assertNotNull("No response for /sample",response);
 		System.out.println("Response = " + response);
-		
 		assertEquals("Hello Jersey + Spring", response);
+		
+		response = target("sample/3").request().get(String.class);
+		assertNotNull("No response for /sample/3",response);
+		System.out.println("Response = " + response);
+		assertEquals("Sample 3", response);
 		
 		System.out.println("Test Complete");
 	}

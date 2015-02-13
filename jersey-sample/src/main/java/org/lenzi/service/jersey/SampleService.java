@@ -3,6 +3,7 @@
  */
 package org.lenzi.service.jersey;
 
+import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -13,7 +14,6 @@ import org.lenzi.model.Sample;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
  *
  * Spring managed JAX-RS resource.
  */
-@Component
+@Singleton
 @Path("/sample")
 @Service
 public class SampleService {
